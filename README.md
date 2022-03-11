@@ -6,7 +6,7 @@ He uses the GPU libraries [rapidsai/cuDF](https://github.com/rapidsai/cudf) to r
 
 His results are very good. Reading the input data takes 4 seconds and performing the spatial join takes only 13 seconds.
 
-I was curious to see how well a Go program using the CPU would compare, so I wrote this little program.
+I was curious to see how well a Go program using the CPU would compare.
 
 I used the Go libraries [tidwall/geojson](https://github.com/tidwall/geojson) for storing the neighborhood polygons and [tidwall/rtree](https://github.com/tidwall/rtree) for the spatial index. These are the same foundational libraries I use in [Tile38](https://github.com/tidwall/tile38).
 
@@ -25,11 +25,11 @@ Total execution time... 7.12 secs
 
 Most of the time is taken up reading the violations CSV file.
 
-The `Joining neighborhoods and violations` operation is where the point-in-polygon and spatial join operation happens.
+The `Joining neighborhoods and violations` operation is where the point-in-polygon and spatial joins happen.
 
 ## Downloading the data
 
-All data is download to the `data` directory.
+All data is downloaded to the `data` directory.
 The `ogr2ogr` command is provided by [GDAL](https://gdal.org).
 
 ```sh
